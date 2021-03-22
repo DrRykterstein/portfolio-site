@@ -1,0 +1,13 @@
+.contact__title {
+  font-size: 32px;
+  border-bottom: 2px solid grey;
+  border-radius: 1px;
+  width: 110px;
+  margin: 0 auto .5rem auto;
+}
+
+.contact__btn__container {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}

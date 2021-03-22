@@ -1,3 +1,9 @@
+# Portfolio Site
+This is the first iteration of my portfolio website built in React and material-ui.
+
+## Launch
+This project will be launched soon...
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

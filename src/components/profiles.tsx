@@ -14,7 +14,7 @@ const Profiles: React.FC<Props> = ({ component }) => {
   return (
     <section className={`profiles__container ${root}`}>
       <a 
-        href="https://github.com/DrRykterstein"
+        href="https://github.com/Terioch"
         target="__blank"
         rel="noopener noreferrer"
       >

@@ -67,15 +67,36 @@
   left: 0;
   height: 100%;
   width: 100%;
-  text-align: center;
   background-color: transparent;
   border-radius: 0 0 15px 15px;
   cursor: default;
   z-index: 3;
+  padding: 1rem;
   display: none;
+}
+
+.overlay__item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .portfolio__grid__item:hover .portfolio__grid__overlay {
   display: block;
   background-color: #21252cbb;
+}
+
+.portfolio__grid__text {
+  text-align: left;
+  color: whitesmoke;
+}
+
+.portfolio__grid__github {
+  color: #e9e9e9;
+}
+
+.portfolio__grid__github:hover {
+  color: #026CCF;
 }

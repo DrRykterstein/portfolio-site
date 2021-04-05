@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Grid, makeStyles } from "@material-ui/core";
+import { ScreenSizeContext } from "../contexts/screenSizeContext";
 import { Controls } from "../controls/Controls";
 import Images from "../modules/portfolioImages";
 import { Components } from "./Components";
@@ -14,8 +15,6 @@ const useStyles = makeStyles(theme => ({
     fontSize: "20px"
   },
   MuiButton__viewSite: {
-    position: "relative",
-    top: "45%",
     fontSize: "18px"
   },
   Paper: {
@@ -36,16 +35,8 @@ const Portfolio: React.FC = () => {
   const classes = useStyles(); // Instantiate useStyles class within classes object
   const { PortfolioItem, Profiles } = Components;
   const { MuiButton } = Controls;
-
-  // Render sidebar profiles programmatically depending on screen width
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-  // Listen for screen size change
-  useEffect(() => {
-    window.addEventListener('resize', () => {
-      setScreenWidth(window.innerWidth);
-    });
-  }, []);
+  const screenSizeContext = useContext(ScreenSizeContext);
+  const { screenWidth } = screenSizeContext;
 
   return (
     <main className="portfolio__container">

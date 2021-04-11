@@ -1,4 +1,4 @@
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { Paper } from "@material-ui/core";
 import { ScreenSizeProvider } from "./contexts/screenSizeContext";
 import { Components } from "./components/Components";
@@ -15,18 +15,16 @@ function App() {
 
   return (
     <ScreenSizeProvider>
-      <Router>
-        <main className="App">
-          <Header />
-          <Switch>
-            <Route path="/" exact component={Portfolio} />
-            <Paper className={`contact__container`}>
-              <Route path="/contact" component={Contact} />
-            </Paper>
-          </Switch> 
-          <Footer /> 
-        </main>
-      </Router>
+      <main className="App">
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Portfolio} />
+          <Paper className={`contact__container`}>
+            <Route path="/contact" component={Contact} />
+          </Paper>
+        </Switch> 
+        <Footer /> 
+      </main>
     </ScreenSizeProvider>
   );
 }

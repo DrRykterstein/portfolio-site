@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { Paper } from "@material-ui/core";
 import { ScreenSizeProvider } from "./contexts/screenSizeContext";
 import { Components } from "./components/Components";

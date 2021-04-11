@@ -5,7 +5,7 @@ import "../css/contact.css";
 import { Controls } from "../controls/Controls";
 import useForm from "../controls/useForm";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   MuiButton: {
     fontSize: "18px"
   }
@@ -25,7 +25,6 @@ const Contact: React.FC = () => {
   // Extract contact form values and errors from dynamic useForm function
   const {
     formValues,
-    setFormValues,
     formErrors,
     setFormErrors,
     handleInputChange,

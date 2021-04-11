@@ -22,7 +22,7 @@ const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
         <div className={classes.imageContainer}>
           <img 
             className="portfolio__grid__image"
-            src={`/images/${name}`} 
+            src={`./images/${name}`} 
             alt="Loading..."
           />
           <div className="portfolio__grid__overlay">

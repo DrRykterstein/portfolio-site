@@ -14,7 +14,7 @@ const Images: ImagesTypes = {
     title: "Technology Blog",
     name: "technology-blog.png",
     github: "technology-blog",
-    link: "#",
+    link: "https://technology-blog-wecxvwfsh-terioch.vercel.app/",
     desc: "A Technology Blog built in React with NextJS and Typescript using static site generation. Design and styling was implemented using the Material-ui library."
   },
   todoApp: {

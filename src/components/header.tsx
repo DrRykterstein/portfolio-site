@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
-import "../css/header.css";
 import { Controls } from "../controls/Controls";
+import "../css/header.css";
 
 // Define custom Mui Styles
 const useStyles = makeStyles(theme => ({

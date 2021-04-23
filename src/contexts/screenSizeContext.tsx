@@ -2,6 +2,7 @@ import {
 	createContext,
 	useState,
 	useEffect,
+	useContext,
 	Dispatch,
 	SetStateAction,
 } from "react";
@@ -15,7 +16,7 @@ export type ScreenSizeModel = {
 };
 
 // Initialize screen size context
-export const ScreenSizeContext = createContext<ScreenSizeModel>({
+const ScreenSizeContext = createContext<ScreenSizeModel>({
 	screenWidth: 0,
 	setScreenWidth: (): void => {},
 });
@@ -39,4 +40,4 @@ export const ScreenSizeProvider: React.FC = ({ children }) => {
 	);
 };
 
-export default ScreenSizeProvider;
+export const useScreenSize = () => useContext(ScreenSizeContext);

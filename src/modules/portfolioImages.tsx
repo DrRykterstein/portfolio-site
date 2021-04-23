@@ -13,7 +13,7 @@ const Images: ImageModel = {
 	bookStore: {
 		title: "Infinite Book Store",
 		name: "book-store.png",
-		github: "book-store",
+		github: "infinite-book-store",
 		link: "https://book-store-nine.vercel.app",
 		desc:
 			"A Book store built in NextJS with Typescript and Shopify as a headless CMS. Products were fetched through the Shopify API with the Buy-SDK library.",

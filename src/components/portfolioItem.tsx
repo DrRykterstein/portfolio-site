@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Grid, Paper, Typography } from "@material-ui/core";
 import { ImageModel } from "../modules/portfolioImages";
 import { Controls } from "../controls/Controls";
-import { ScreenSizeContext } from "../contexts/screenSizeContext";
+import { useScreenSize } from "../contexts/screenSizeContext";
 
 interface Props {
 	Images: ImageModel;
@@ -11,8 +11,7 @@ interface Props {
 }
 
 const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
-	const screenSize = useContext(ScreenSizeContext);
-	const { screenWidth } = screenSize;
+	const { screenWidth } = useScreenSize();
 	const { title, name, github, link, desc } = Images[image];
 
 	return (

@@ -11,7 +11,7 @@ export type ImageModel = {
 // Define portfolio images
 const Images: ImageModel = {
 	bookStore: {
-		title: "Technology Blog",
+		title: "Infinite Book Store",
 		name: "book-store.png",
 		github: "book-store",
 		link: "https://book-store-nine.vercel.app",

@@ -50,6 +50,7 @@ const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
 							>
 								<Controls.MuiButton
 									className={classes.MuiButton__viewSite}
+									size={screenWidth <= 768 ? "medium" : "large"}
 								>
 									View Site
 								</Controls.MuiButton>

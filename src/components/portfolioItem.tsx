@@ -4,10 +4,14 @@ import { ImageModel } from "../modules/portfolioImages";
 import { Controls } from "../controls/Controls";
 import { useScreenSize } from "../contexts/screenSizeContext";
 
+interface Classes {
+	[key: string]: string;
+}
+
 interface Props {
 	Images: ImageModel;
 	image: string;
-	classes: any;
+	classes: Classes;
 }
 
 const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {

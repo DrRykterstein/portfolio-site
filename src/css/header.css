@@ -1,48 +1,48 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem;
-  background-color: var(--mainBackground);
-  color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem;
+	background-color: var(--mainBackground);
+	color: white;
 }
 
-.header__logo__container {
-  text-decoration: none;
+.header__textDecoration {
+	text-decoration: none;
 }
 
 .header__logo {
-  font-size: 40px;
-  color: #ececec;
-  text-shadow: 0 0 25px rgba(255, 255, 255, 0.178);
-  cursor: pointer;
+	font-size: 40px;
+	color: #ececec;
+	text-shadow: 0 0 25px rgba(255, 255, 255, 0.178);
+	cursor: pointer;
 }
 
 .header__menu {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  font-size: 18px;
-}
-
-.header__link {
-  text-decoration: none;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+	font-size: 18px;
 }
 
 .header__link > * {
-  margin: 0 .6rem;
-  color: var(--text);
-  font-size: 20px;
+	margin: 0 0.6rem;
+	color: var(--text);
+	font-size: 20px;
 }
 
 .header__linkText:hover {
-  color: white;
-  text-shadow: 0 0 25px rgba(255, 255, 255, 0.288);
+	color: white;
+	text-shadow: 0 0 25px rgba(255, 255, 255, 0.288);
+}
+
+.header__mobile__item:hover {
+	background-color: #333333;
 }
 
 @media only screen and (max-width: 768px) {
-  .header__logo {
-    font-size: 32px;
-  }
+	.header__logo {
+		font-size: 32px;
+	}
 }

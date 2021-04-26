@@ -33,7 +33,7 @@
   text-align: center;
 }
 
-.portfolio__main__container >  * {
+.portfolio__main__container > * {
   margin: 1.5rem 0;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .portfolio__grid__title {
-  padding: .5rem;
+  padding: 0.5rem;
   color: rgba(245, 245, 245, 0.719);
   font-size: 24px;
   letter-spacing: 1px;
@@ -91,6 +91,7 @@
 .portfolio__grid__text {
   text-align: left;
   color: whitesmoke;
+  overflow: hidden;
 }
 
 .portfolio__grid__github {
@@ -98,5 +99,5 @@
 }
 
 .portfolio__grid__github:hover {
-  color: #026CCF;
+  color: #026ccf;
 }

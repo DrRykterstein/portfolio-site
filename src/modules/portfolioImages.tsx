@@ -16,7 +16,7 @@ const Images: ImageModel = {
 		github: "infinite-book-store",
 		link: "https://book-store-nine.vercel.app",
 		desc:
-			"A Book store built in NextJS with Typescript and Shopify as a headless CMS. Products were fetched through the Shopify API with the Buy-SDK library.",
+			"A Book store built in NextJS, Typescript, Shopify with headless integration and full firebase authentication. Products are fetched through Shopify's buy-SDK library.",
 	},
 	technologyBlog: {
 		title: "Technology Blog",
@@ -24,7 +24,7 @@ const Images: ImageModel = {
 		github: "technology-blog",
 		link: "https://technology-blog-mx3fs17kh-terioch.vercel.app",
 		desc:
-			"A Technology Blog built in NextJS with Typescript using static site generation and styled using the Material-ui library.",
+			"A Technology Blog built in NextJS with Typescript using static site generation and material-ui with form validation.",
 	},
 	todoApp: {
 		title: "Todo App",

@@ -101,9 +101,3 @@
 .portfolio__grid__github:hover {
 	color: #026ccf;
 }
-
-@media only screen and (max-width: 568px) {
-	.portfolio__grid__github {
-		display: none;
-	}
-}

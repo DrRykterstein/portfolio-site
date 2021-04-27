@@ -29,6 +29,10 @@ const useStyles = makeStyles(theme => ({
 	Link: {
 		textDecoration: "none",
 	},
+	typography: {
+		backgroundColor: "#e8e8e8",
+		padding: theme.spacing(1),
+	},
 }));
 
 const Portfolio: React.FC = () => {

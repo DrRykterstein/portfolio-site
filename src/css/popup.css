@@ -1,0 +1,8 @@
+.popup__link {
+	color: white;
+}
+
+.popup__link:hover {
+	border-bottom: 2px solid whitesmoke;
+	cursor: pointer;
+}

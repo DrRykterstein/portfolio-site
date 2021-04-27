@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Grid, Paper, Typography } from "@material-ui/core";
 import { ImageModel } from "../modules/portfolioImages";
 import { Controls } from "../controls/Controls";
 import { useScreenSize } from "../contexts/screenSizeContext";
+// import technologyBlog from "../technology-blog.png";
 
 interface Classes {
 	[key: string]: string;
@@ -16,7 +17,38 @@ interface Props {
 
 const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
 	const { screenWidth } = useScreenSize();
+	const { MuiButton, Popup } = Controls;
 	const { title, name, github, link, desc } = Images[image];
+	const [descSize, setDescSize] = useState("");
+
+	// Set new description font size upon screen width change
+	useEffect(() => {
+		if (screenWidth > 1300 || (screenWidth <= 960 && screenWidth > 568)) {
+			return setDescSize("h6");
+		}
+		setDescSize("body1");
+	}, [screenWidth]);
+
+	// Display full app description on desktop via a popup trigger on mobile
+	const handleProjectDescription = () => {
+		return screenWidth <= 568 ? (
+			<Popup
+				open
+				anchorOrigin={{ vertical: "top", horizontal: "center" }}
+				transformOrigin={{ vertical: "bottom", horizontal: "center" }}
+				elevation={8}
+			>
+				<Typography className={classes.typography}>{desc}</Typography>
+			</Popup>
+		) : (
+			<Typography
+				className="portfolio__grid__text"
+				variant={descSize === "h6" ? "h6" : "body1"}
+			>
+				{desc}
+			</Typography>
+		);
+	};
 
 	return (
 		<Grid item xs={12} md={6}>
@@ -25,7 +57,7 @@ const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
 				<div className={classes.imageContainer}>
 					<img
 						className="portfolio__grid__image"
-						src={`./images/${name}`}
+						src={`${process.env.PUBLIC_URL}/images/${name}`}
 						alt="Loading..."
 					/>
 					<div className="portfolio__grid__overlay">
@@ -52,19 +84,14 @@ const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
 								target="__blank"
 								rel="noopener noreferrer"
 							>
-								<Controls.MuiButton
+								<MuiButton
 									className={classes.MuiButton__viewSite}
-									size={screenWidth <= 768 ? "medium" : "large"}
+									size={screenWidth <= 1068 ? "medium" : "large"}
 								>
 									View Site
-								</Controls.MuiButton>
+								</MuiButton>
 							</a>
-							<Typography
-								className="portfolio__grid__text"
-								variant={screenWidth <= 768 ? "body1" : "h6"}
-							>
-								{desc}
-							</Typography>
+							{handleProjectDescription()}
 						</div>
 					</div>
 				</div>

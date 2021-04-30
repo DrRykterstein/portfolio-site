@@ -1,25 +1,23 @@
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { Popover, PopoverProps } from "@material-ui/core";
 import "../css/popup.css";
 
 interface Props extends PopoverProps {
-	Trigger: React.FC;
+	anchor: any;
+	setAnchor: Dispatch<SetStateAction<string | null>>;
 }
 
 const Popup: React.FC<Props> = ({
 	children,
-	Trigger,
+	anchor,
+	setAnchor,
 	anchorOrigin,
 	transformOrigin,
 	elevation,
 }) => {
-	// Popup is closed if anchor is null and vice versa
-	const [anchor, setAnchor] = useState(null);
-	console.log(Trigger);
-
+	console.log(anchor);
 	return (
 		<>
-			<Trigger />
 			<Popover
 				open={Boolean(anchor)}
 				anchorEl={anchor}

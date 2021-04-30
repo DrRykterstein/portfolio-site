@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Grid, Paper, Typography } from "@material-ui/core";
 import { ImageModel } from "../modules/portfolioImages";
-import { Controls } from "../controls/Controls";
+import { SharedComponents } from "../shared-components/SharedComponents";
+import usePopup from "../controls/usePopup";
 import { useScreenSize } from "../contexts/screenSizeContext";
+import { Grid, Paper, Typography } from "@material-ui/core";
 
 interface Classes {
 	[key: string]: string;
@@ -15,9 +16,10 @@ interface Props {
 }
 
 const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
-	const { screenWidth } = useScreenSize();
-	const { MuiButton, Popup, AnchorLink, SvgIcon } = Controls;
+	const { MuiButton, Popup, AnchorLink, SvgIcon } = SharedComponents;
 	const { title, name, github, link, desc } = Images[image];
+	const { anchor, setAnchor, handleAnchor } = usePopup();
+	const { screenWidth } = useScreenSize();
 	const [descSize, setDescSize] = useState("");
 
 	// Set new description font size upon screen width change
@@ -29,25 +31,27 @@ const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
 	}, [screenWidth]);
 
 	// Display full app description on desktop via a popup trigger on mobile
-	const handleProjectDescription = () => {
-		// Initialize Popup trigger component
-		const Trigger = ({ onClick }: any) => (
-			<Typography className="popup__link" variant="h6" onClick={onClick}>
-				Read App Description...
-			</Typography>
-		);
-
-		return screenWidth <= 668 ||
-			(screenWidth > 960 && screenWidth < 1400) ? (
-			<Popup
-				open
-				Trigger={Trigger}
-				anchorOrigin={{ vertical: "top", horizontal: "center" }}
-				transformOrigin={{ vertical: "bottom", horizontal: "center" }}
-				elevation={8}
-			>
-				<Typography className={classes.typography}>{desc}</Typography>
-			</Popup>
+	const handleProjectDescription = () =>
+		screenWidth <= 668 || (screenWidth > 960 && screenWidth < 1400) ? (
+			<>
+				<Typography
+					className="popup__link"
+					variant="h6"
+					onClick={handleAnchor}
+				>
+					Read App Description...
+				</Typography>
+				<Popup
+					open
+					anchor={anchor}
+					setAnchor={setAnchor}
+					anchorOrigin={{ vertical: "top", horizontal: "center" }}
+					transformOrigin={{ vertical: "bottom", horizontal: "center" }}
+					elevation={8}
+				>
+					<Typography className={classes.Typography}>{desc}</Typography>
+				</Popup>
+			</>
 		) : (
 			<Typography
 				className="portfolio__grid__text"
@@ -56,7 +60,6 @@ const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
 				{desc}
 			</Typography>
 		);
-	};
 
 	return (
 		<Grid item xs={12} md={6}>

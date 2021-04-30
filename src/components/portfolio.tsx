@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Grid, makeStyles } from "@material-ui/core";
 import { Components } from "./Components";
-import { Controls } from "../controls/Controls";
+import { SharedComponents } from "../shared-components/SharedComponents";
 import { useScreenSize } from "../contexts/screenSizeContext";
 import Images from "../modules/portfolioImages";
 import "../css/portfolio.css";
@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
 const Portfolio: React.FC = () => {
 	const classes = useStyles(); // Instantiate useStyles class within classes object
 	const { PortfolioItem, Profiles } = Components;
-	const { MuiButton } = Controls;
+	const { MuiButton } = SharedComponents;
 	const { screenWidth } = useScreenSize();
 
 	return (

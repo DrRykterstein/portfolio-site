@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Controls } from "../controls/Controls";
+import { SharedComponents } from "../shared-components/SharedComponents";
 import { makeStyles } from "@material-ui/core";
 
 interface Props {}
@@ -13,6 +13,7 @@ const useStyles = makeStyles(() => ({
 
 const DesktopMenu: React.FC<Props> = () => {
 	const classes = useStyles();
+	const { MuiButton } = SharedComponents;
 
 	return (
 		<ul className="header__menu">
@@ -20,9 +21,7 @@ const DesktopMenu: React.FC<Props> = () => {
 				<li className="header__linkText">Portfolio</li>
 			</Link>
 			<Link className="header__link header__textDecoration" to="/contact">
-				<Controls.MuiButton className={classes.MuiButton}>
-					Contact
-				</Controls.MuiButton>
+				<MuiButton className={classes.MuiButton}>Contact</MuiButton>
 			</Link>
 		</ul>
 	);

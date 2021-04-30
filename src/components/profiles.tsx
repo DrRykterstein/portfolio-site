@@ -1,5 +1,5 @@
 import React from "react";
-import { Controls } from "../controls/Controls";
+import { SharedComponents } from "../shared-components/SharedComponents";
 import useProfiles from "../controls/useProfiles";
 import "../css/profiles.css";
 
@@ -9,7 +9,7 @@ interface Props {
 
 const Profiles: React.FC<Props> = ({ component }) => {
 	// Extract styles based on component
-	const { AnchorLink, SvgIcon } = Controls;
+	const { AnchorLink, SvgIcon } = SharedComponents;
 	const classes = useProfiles(component);
 	const { root, icon } = classes;
 

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useScreenSize } from "../contexts/screenSizeContext";
 import { Components } from "./Components";
 import { Toolbar } from "@material-ui/core";
-import "../css/header.css";
+import "../css/nav.css";
 
 const Header: React.FC = () => {
 	const { DesktopMenu, MobileMenu } = Components;

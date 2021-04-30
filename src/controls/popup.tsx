@@ -1,25 +1,25 @@
 import React, { useState } from "react";
-import { Popover, PopoverProps, Typography } from "@material-ui/core";
+import { Popover, PopoverProps } from "@material-ui/core";
 import "../css/popup.css";
 
-const Popup: React.FC<PopoverProps> = ({
+interface Props extends PopoverProps {
+	Trigger: React.FC;
+}
+
+const Popup: React.FC<Props> = ({
 	children,
+	Trigger,
 	anchorOrigin,
 	transformOrigin,
 	elevation,
 }) => {
 	// Popup is closed if anchor is null and vice versa
 	const [anchor, setAnchor] = useState(null);
+	console.log(Trigger);
 
 	return (
 		<>
-			<Typography
-				className="popup__link"
-				variant="h6"
-				onClick={(e: any) => setAnchor(e.currentTarget)}
-			>
-				Read App Description...
-			</Typography>
+			<Trigger />
 			<Popover
 				open={Boolean(anchor)}
 				anchorEl={anchor}

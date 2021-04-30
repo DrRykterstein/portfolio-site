@@ -1,20 +1,20 @@
-import Header from "./header";
+import Header from "./nav";
 import DesktopMenu from "./desktopMenu";
 import MobileMenu from "./mobileMenu";
-import Profiles from "./profiles";
 import Portfolio from "./portfolio";
 import PortfolioItem from "./portfolioItem";
+import Profiles from "./profiles";
 import Contact from "./contact";
 import Footer from "./footer";
 
-// Define Components object to store main components
+// Define main components
 export const Components = {
 	Header,
 	MobileMenu,
 	DesktopMenu,
-	Profiles,
 	Portfolio,
 	PortfolioItem,
+	Profiles,
 	Contact,
 	Footer,
 };

@@ -1,21 +1,20 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import { Popover, PopoverProps } from "@material-ui/core";
 import "../css/popup.css";
 
 interface Props extends PopoverProps {
 	anchor: any;
-	setAnchor: Dispatch<SetStateAction<string | null>>;
 }
 
 const Popup: React.FC<Props> = ({
 	children,
 	anchor,
-	setAnchor,
 	anchorOrigin,
 	transformOrigin,
 	elevation,
+	onClose,
 }) => {
-	console.log(anchor);
+	console.log(children);
 	return (
 		<>
 			<Popover
@@ -24,7 +23,7 @@ const Popup: React.FC<Props> = ({
 				anchorOrigin={anchorOrigin}
 				transformOrigin={transformOrigin}
 				elevation={elevation || 8}
-				onClose={() => setAnchor(null)}
+				onClose={onClose}
 			>
 				{children}
 			</Popover>

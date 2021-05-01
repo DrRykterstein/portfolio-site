@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { ImageModel } from "../modules/portfolioImages";
 import { SharedComponents } from "../shared-components/SharedComponents";
-import usePopup from "../controls/usePopup";
 import { useScreenSize } from "../contexts/screenSizeContext";
+import usePopup from "../controls/usePopup";
 import { Grid, Paper, Typography } from "@material-ui/core";
 
 interface Classes {
@@ -18,7 +18,7 @@ interface Props {
 const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
 	const { MuiButton, Popup, AnchorLink, SvgIcon } = SharedComponents;
 	const { title, name, github, link, desc } = Images[image];
-	const { anchor, setAnchor, handleAnchor } = usePopup();
+	const { anchor, handleAnchorOpen, handleAnchorClose } = usePopup();
 	const { screenWidth } = useScreenSize();
 	const [descSize, setDescSize] = useState("");
 
@@ -37,17 +37,16 @@ const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
 				<Typography
 					className="popup__link"
 					variant="h6"
-					onClick={handleAnchor}
+					onClick={handleAnchorOpen}
 				>
 					Read App Description...
 				</Typography>
 				<Popup
 					open
 					anchor={anchor}
-					setAnchor={setAnchor}
 					anchorOrigin={{ vertical: "top", horizontal: "center" }}
 					transformOrigin={{ vertical: "bottom", horizontal: "center" }}
-					elevation={8}
+					onClose={handleAnchorClose}
 				>
 					<Typography className={classes.Typography}>{desc}</Typography>
 				</Popup>
@@ -76,11 +75,18 @@ const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
 							<AnchorLink href={`https://github.com/Terioch/${github}`}>
 								<SvgIcon
 									className={`portfolio__grid__github`}
-									height="32"
-									width="32"
+									height="45"
+									width="45"
+									//onMouseEnter={handleAnchorOpen}
+									//onMouseLeave={handleAnchorClose}
 								>
 									<path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z" />
 								</SvgIcon>
+								{/* <Popup open anchor={anchor}>
+									<Typography className={classes.Typography}>
+										View Code in Github
+									</Typography>
+								</Popup> */}
 							</AnchorLink>
 							<AnchorLink className={classes.Link} href={link}>
 								<MuiButton

@@ -4,6 +4,8 @@ interface Props {
 	width?: string;
 	height?: string;
 	className?: string;
+	onMouseEnter?: (e: React.MouseEvent) => void;
+	onMouseLeave?: () => void;
 }
 
 const SvgIcon: React.FC<Props> = ({
@@ -11,6 +13,8 @@ const SvgIcon: React.FC<Props> = ({
 	height,
 	className,
 	children,
+	onMouseEnter,
+	onMouseLeave,
 }) => {
 	return (
 		<svg
@@ -20,6 +24,8 @@ const SvgIcon: React.FC<Props> = ({
 			fill="currentColor"
 			className={className}
 			viewBox="0 0 16 16"
+			onMouseEnter={onMouseEnter}
+			onMouseLeave={onMouseLeave}
 		>
 			{children}
 		</svg>

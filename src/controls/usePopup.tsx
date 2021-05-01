@@ -4,12 +4,16 @@ function usePopup() {
 	// Popup is closed if anchor is null and vice versa
 	const [anchor, setAnchor] = useState<any>(null);
 
-	const handleAnchor = (e: React.MouseEvent) => setAnchor(e.currentTarget);
+	const handleAnchorOpen = (e: React.MouseEvent) =>
+		setAnchor(e.currentTarget);
+
+	const handleAnchorClose = () => setAnchor(null);
 
 	return {
 		anchor,
 		setAnchor,
-		handleAnchor,
+		handleAnchorOpen,
+		handleAnchorClose,
 	};
 }
 

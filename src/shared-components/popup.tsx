@@ -11,7 +11,6 @@ const Popup: React.FC<Props> = ({
 	anchor,
 	anchorOrigin,
 	transformOrigin,
-	elevation,
 	onClose,
 }) => {
 	console.log(children);
@@ -22,7 +21,6 @@ const Popup: React.FC<Props> = ({
 				anchorEl={anchor}
 				anchorOrigin={anchorOrigin}
 				transformOrigin={transformOrigin}
-				elevation={elevation || 8}
 				onClose={onClose}
 			>
 				{children}

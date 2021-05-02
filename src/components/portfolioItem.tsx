@@ -3,7 +3,7 @@ import { ImageModel } from "../modules/portfolioImages";
 import { SharedComponents } from "../shared-components/SharedComponents";
 import { useScreenSize } from "../contexts/screenSizeContext";
 import usePopup from "../controls/usePopup";
-import { Grid, Paper, Typography } from "@material-ui/core";
+import { Grid, Paper, Typography, Box } from "@material-ui/core";
 
 interface Classes {
 	[key: string]: string;
@@ -64,21 +64,19 @@ const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
 		<Grid item xs={12} md={6}>
 			<Paper className={`${classes.Paper} portfolio__grid__item`}>
 				<h1 className="portfolio__grid__title">{title}</h1>
-				<div className={classes.ImageContainer}>
+				<div className="portfolio__grid__imageContainer">
 					<img
 						className="portfolio__grid__image"
 						src={`${process.env.PUBLIC_URL}/images/${name}`}
 						alt="Loading..."
 					/>
 					<div className="portfolio__grid__overlay">
-						<div className="overlay__item">
+						<div className="portfolio__grid__overlay__items">
 							<AnchorLink href={`https://github.com/Terioch/${github}`}>
 								<SvgIcon
 									className={`portfolio__grid__github`}
-									height="45"
-									width="45"
-									//onMouseEnter={handleAnchorOpen}
-									//onMouseLeave={handleAnchorClose}
+									width={screenWidth <= 414 ? "25" : "35"}
+									height={screenWidth <= 414 ? "25" : "35"}
 								>
 									<path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z" />
 								</SvgIcon>

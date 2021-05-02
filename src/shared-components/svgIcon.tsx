@@ -1,6 +1,7 @@
 import React from "react";
 
 interface Props {
+	viewBox?: string;
 	width?: string;
 	height?: string;
 	className?: string;

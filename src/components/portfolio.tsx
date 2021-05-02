@@ -22,9 +22,6 @@ const useStyles = makeStyles(theme => ({
 		cursor: "pointer",
 		borderRadius: "15px",
 	},
-	ImageContainer: {
-		position: "relative",
-	},
 	Link: {
 		textDecoration: "none",
 	},

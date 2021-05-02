@@ -13,7 +13,6 @@ const Popup: React.FC<Props> = ({
 	transformOrigin,
 	onClose,
 }) => {
-	console.log(children);
 	return (
 		<>
 			<Popover

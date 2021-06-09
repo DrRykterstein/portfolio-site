@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ImageModel } from "../modules/portfolioImages";
+import { PortfolioImages } from "../models/PortfolioImages";
 import { Classes } from "../models/Classes";
 import { SharedComponents } from "../shared-components/SharedComponents";
 import { useScreenSize } from "../contexts/screenSizeContext";
@@ -7,7 +7,7 @@ import usePopup from "../controls/usePopup";
 import { Grid, Paper, Typography } from "@material-ui/core";
 
 interface Props {
-	Images: ImageModel;
+	Images: PortfolioImages;
 	image: string;
 	classes: Classes;
 }

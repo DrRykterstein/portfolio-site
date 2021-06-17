@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { PortfolioImages } from "../models/PortfolioImages";
+import { PortfolioItems } from "../models/PortfolioItems";
 import { Classes } from "../models/Classes";
 import { SharedComponents } from "../shared-components/SharedComponents";
 import { useScreenSize } from "../contexts/screenSizeContext";
@@ -7,14 +7,14 @@ import usePopup from "../controls/usePopup";
 import { Grid, Paper, Typography } from "@material-ui/core";
 
 interface Props {
-	Images: PortfolioImages;
-	image: string;
+	Items: PortfolioItems;
+	item: string;
 	classes: Classes;
 }
 
-const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
+const PortfolioItem: React.FC<Props> = ({ Items, item, classes }) => {
 	const { MuiButton, Popup, AnchorLink, SvgIcon } = SharedComponents;
-	const { title, name, github, link, desc } = Images[image];
+	const { title, src, github, link, desc } = Items[item];
 	const { anchor, handleAnchorOpen, handleAnchorClose } = usePopup();
 	const { screenWidth } = useScreenSize();
 	const [descSize, setDescSize] = useState("");
@@ -64,7 +64,7 @@ const PortfolioItem: React.FC<Props> = ({ Images, image, classes }) => {
 				<div className="portfolio__grid__imageContainer">
 					<img
 						className="portfolio__grid__image"
-						src={`${process.env.PUBLIC_URL}/images/${name}`}
+						src={`${process.env.PUBLIC_URL}/images/${src}`}
 						alt="Loading..."
 					/>
 					<div className="portfolio__grid__overlay">

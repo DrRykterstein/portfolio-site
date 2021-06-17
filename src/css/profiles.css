@@ -1,15 +1,16 @@
-.bi:hover {
+/* .bi:hover {
 	/* color: #026ccf; */
-	color: #4183c4;
-}
+/* color: #4183c4; */
+/*} */
 
-/* .bi-github:hover {
-	color: #4183c4;
+.bi-github:hover {
+	color: #959ca7;
 }
 
 .bi-resume:hover {
+	color: #6577e0;
 }
 
 .bi-linkedin:hover {
-	color: #006192;
-} */
+	color: #4183c4;
+}

@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Form: React.FC<Props> = ({ children, ...other }) => {
-	const classes = useStyles(); // Instantiate contact form styles
+	const classes = useStyles();
 
 	return (
 		<form className={classes.root} autoComplete="off" {...other}>

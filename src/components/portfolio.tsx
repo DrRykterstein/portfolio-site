@@ -4,7 +4,7 @@ import { Grid, makeStyles } from "@material-ui/core";
 import { Components } from "./Components";
 import { SharedComponents } from "../shared-components/SharedComponents";
 import { useScreenSize } from "../contexts/screenSizeContext";
-import Images from "../modules/portfolioImages";
+import PortfolioItems from "../modules/portfolioItems";
 import "../css/portfolio.css";
 
 // Define custom Mui styles
@@ -32,9 +32,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Portfolio: React.FC = () => {
-	const classes = useStyles(); // Instantiate useStyles class within classes object
 	const { PortfolioItem, Profiles } = Components;
 	const { MuiButton } = SharedComponents;
+	const classes = useStyles();
 	const { screenWidth } = useScreenSize();
 
 	return (
@@ -45,7 +45,10 @@ const Portfolio: React.FC = () => {
 				</h1>
 				{screenWidth > 968 && <Profiles component="Portfolio" />}
 				<Link className={classes.Link} to="/contact">
-					<MuiButton className={classes.MuiButton__learnMore}>
+					<MuiButton
+						className={classes.MuiButton__learnMore}
+						color="secondary"
+					>
 						Learn More
 					</MuiButton>
 				</Link>
@@ -53,11 +56,11 @@ const Portfolio: React.FC = () => {
 			<section className="portfolio__main__container">
 				<h1 className="portfolio__main__title">Portfolio</h1>
 				<Grid container spacing={2}>
-					{Object.keys(Images).map((image, idx) => (
+					{Object.keys(PortfolioItems).map((item, idx) => (
 						<PortfolioItem
 							key={idx}
-							Images={Images}
-							image={image}
+							Items={PortfolioItems}
+							item={item}
 							classes={classes}
 						/>
 					))}

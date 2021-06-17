@@ -8,12 +8,6 @@ import "../css/contact.css";
 const useStyles = makeStyles(() => ({
 	MuiButton: {
 		fontSize: "18px",
-		// backgroundColor: "#6B7280",
-		backgroundColor: "#636363",
-		color: "#FFFFFF",
-		"&:hover": {
-			backgroundColor: "#6B7280",
-		},
 	},
 }));
 
@@ -117,7 +111,7 @@ const Contact: React.FC = () => {
 							<MuiButton
 								className={classes.MuiButton}
 								type="submit"
-								color="default"
+								color="secondary"
 							>
 								Send Message
 							</MuiButton>

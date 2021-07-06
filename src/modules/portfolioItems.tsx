@@ -1,7 +1,7 @@
 import { PortfolioItems } from "../models/PortfolioItems";
 
 // Define portfolio images
-const Images: PortfolioItems = {
+const portfolioItems: PortfolioItems = {
 	borgfy: {
 		title: "Borgfy",
 		src: "borgfy.png",
@@ -44,13 +44,6 @@ const Images: PortfolioItems = {
 		link: "https://dreamy-hopper-a7849c.netlify.app",
 		desc: "A simple currency converter built in ReactJS. Currency data is fetched via the Exchange Rates API.",
 	},
-	clickerGame: {
-		title: "Clicker Game",
-		src: "clicker-game.png",
-		github: "react-clicker-game",
-		link: "http://rio-clicker-game.herokuapp.com",
-		desc: "A clicker game built in React with Typescript. Earn points based on clicks and make progress by purchasing upgrades in the shop.",
-	},
 };
 
-export default Images;
+export default portfolioItems;

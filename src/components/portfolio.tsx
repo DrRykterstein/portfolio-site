@@ -4,7 +4,7 @@ import { Grid, makeStyles } from "@material-ui/core";
 import { Components } from "./Components";
 import { SharedComponents } from "../shared-components/SharedComponents";
 import { useScreenSize } from "../contexts/screenSizeContext";
-import PortfolioItems from "../modules/portfolioItems";
+import portfolioItems from "../modules/portfolioItems";
 import "../css/portfolio.css";
 
 // Define custom Mui styles
@@ -56,10 +56,10 @@ const Portfolio: React.FC = () => {
 			<section className="portfolio__main__container">
 				<h1 className="portfolio__main__title">Portfolio</h1>
 				<Grid container spacing={2}>
-					{Object.keys(PortfolioItems).map((item, idx) => (
+					{Object.keys(portfolioItems).map((item, idx) => (
 						<PortfolioItem
 							key={idx}
-							Items={PortfolioItems}
+							Items={portfolioItems}
 							item={item}
 							classes={classes}
 						/>

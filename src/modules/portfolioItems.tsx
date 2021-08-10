@@ -6,7 +6,7 @@ const portfolioItems: PortfolioItems = {
 		title: "Borgfy",
 		src: "borgfy.png",
 		github: "null",
-		link: "https://borgfy.com",
+		link: "https://borgfy-terioch.vercel.app",
 		desc: "A website for a technology development company built in NextJS with Ghost as a headless CMS. The design was implemented using Styled Components, SCSS and Material UI.",
 	},
 	bookStore: {

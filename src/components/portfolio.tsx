@@ -4,7 +4,7 @@ import { Grid, makeStyles } from "@material-ui/core";
 import { Components } from "./Components";
 import { SharedComponents } from "../shared-components/SharedComponents";
 import { useScreenSize } from "../contexts/screenSizeContext";
-import portfolioItems from "../modules/portfolioItems";
+import portfolioItems from "../data/portfolioItems";
 import "../css/portfolio.css";
 
 // Define custom Mui styles

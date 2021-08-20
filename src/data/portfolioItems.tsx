@@ -7,7 +7,7 @@ const portfolioItems: PortfolioItems = {
 		src: "wired.png",
 		github: "wired",
 		link: "https://wired-terioch.herokuapp.com/",
-		desc: "A full-stack messaging app built in React and Node using a RESTful system coupled with JWT authentication and a PostgreSQL database. The frontend was designed using Material UI.",
+		desc: "A full-stack messaging app built in React and Node using a RESTful system, web sockets with socket.io, JWT authentication and a PostgreSQL database. The frontend was designed using Material UI.",
 	},
 	borgfy: {
 		title: "Borgfy",

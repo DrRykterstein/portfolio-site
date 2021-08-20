@@ -2,6 +2,13 @@ import { PortfolioItems } from "../models/PortfolioItems";
 
 // Define items for portfolio
 const portfolioItems: PortfolioItems = {
+	wired: {
+		title: "Wired",
+		src: "wired.png",
+		github: "wired",
+		link: "https://wired-terioch.herokuapp.com/",
+		desc: "A full-stack messaging app built in React and Node using a RESTful system coupled with JWT authentication and a PostgreSQL database. The frontend was designed using Material UI.",
+	},
 	borgfy: {
 		title: "Borgfy",
 		src: "borgfy.png",
@@ -28,7 +35,7 @@ const portfolioItems: PortfolioItems = {
 		src: "todo-app.png",
 		github: "react-todo-app",
 		link: "https://optimistic-poitras-267ce4.netlify.app",
-		desc: "A Todo List App built in ReactJS and structured using class components. Includes full CRUD functionality as well as MySQL database integration. Contains a background image fetched using the Unsplash REST API.",
+		desc: "A Todo List App built in React and structured using class components. Includes full CRUD functionality as well as MySQL database integration. Contains a background image fetched using the Unsplash REST API.",
 	},
 	countryLibrary: {
 		title: "Country Library",
@@ -42,7 +49,7 @@ const portfolioItems: PortfolioItems = {
 		src: "currency-converter.png",
 		github: "react-currency-converter",
 		link: "https://dreamy-hopper-a7849c.netlify.app",
-		desc: "A simple currency converter built in ReactJS. Currency data is fetched via the Exchange Rates API.",
+		desc: "A simple currency converter built in React. Currency data is fetched via the Exchange Rates API.",
 	},
 };
 

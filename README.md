@@ -1,8 +1,10 @@
 # Portfolio Site
-This is the first iteration of my portfolio website built in React and material-ui.
+
+This is my main developer portfolio site built in React and Material UI.
 
 ## Launch
-This project will be launched soon...
+
+This project is hosted via Github Pages at https://terioch.github.io/portfolio-site/#/
 
 # Getting Started with Create React App
 

@@ -13,7 +13,7 @@ const portfolioItems: PortfolioItems = {
 		title: "Technology Blog",
 		src: "tech-blog.png",
 		github: "tech-blog-server",
-		link: "https://dotnet-bug-tracker.herokuapp.com/",
+		link: "https://tech-blog-three.vercel.app/blog",
 		desc: "A programming tutorial blog built in C# Asp.Net Web API and React with JWT authentication, claims-based authorization and a PostgreSQL database.",
 	},
 	wired: {

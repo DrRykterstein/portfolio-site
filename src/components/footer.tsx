@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core";
 import { Components } from "./Components";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
 	root: {
 		display: "flex",
 		flexDirection: "column",
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
 		<footer className={classes.root}>
 			<Profiles component="Footer" />
 			<p className={classes.text}>
-				Terioch Development | Copyright &copy; 2021
+				Terioch Development | Copyright &copy; 2022
 			</p>
 		</footer>
 	);

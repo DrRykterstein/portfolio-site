@@ -1,5 +1,5 @@
 import { createMuiTheme } from "@material-ui/core";
-import { blue, indigo, lightBlue } from "@material-ui/core/colors";
+import { blue, indigo, lightBlue, grey } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
 	palette: {
@@ -10,6 +10,10 @@ const theme = createMuiTheme({
 		secondary: {
 			main: indigo[500],
 			light: indigo[300],
+		},
+		info: {
+			main: grey[400],
+			light: grey[200],
 		},
 	},
 	overrides: {

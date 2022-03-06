@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Grid, makeStyles } from "@material-ui/core";
 import { Components } from "./Components";
 import { SharedComponents } from "../shared-components/SharedComponents";
 import { useScreenSize } from "../contexts/screenSizeContext";
 import portfolioItems from "../data/portfolioItems";
+import { Grid, Chip, makeStyles } from "@material-ui/core";
 import "../css/portfolio.css";
 
 // Define custom Mui styles
@@ -17,10 +17,24 @@ const useStyles = makeStyles((theme) => ({
 	MuiButton__viewSite: {
 		fontSize: "18px",
 	},
+	SkillsChip: {
+		borderRadius: "5px",
+		width: "max-content",
+		height: "40px",
+		fontSize: "16px",
+		backgroundColor: "#212121",
+		color: "#90A4AE",
+		// backgroundColor: "#E0E0E0",
+		// color: "#757575",
+		[theme.breakpoints.down("xs")]: {
+			height: "32px",
+			fontSize: "14px",
+		},
+	},
 	Paper: {
 		backgroundColor: "#0F1217",
 		cursor: "pointer",
-		borderRadius: "15px",
+		borderRadius: "10px",
 	},
 	Link: {
 		textDecoration: "none",
@@ -49,6 +63,31 @@ const Portfolio: React.FC = () => {
 						Learn More
 					</MuiButton>
 				</Link>
+				<div>
+					<Grid container spacing={2}>
+						<Grid item>
+							<Chip className={classes.SkillsChip} label="C#" />
+						</Grid>
+						<Grid item>
+							<Chip className={classes.SkillsChip} label=".NET" />
+						</Grid>
+						<Grid item>
+							<Chip className={classes.SkillsChip} label="MVC" />
+						</Grid>
+						<Grid item>
+							<Chip className={classes.SkillsChip} label="JavaScript" />
+						</Grid>
+						<Grid item>
+							<Chip className={classes.SkillsChip} label="React" />
+						</Grid>
+						<Grid item>
+							<Chip className={classes.SkillsChip} label="REST API" />
+						</Grid>
+						<Grid item>
+							<Chip className={classes.SkillsChip} label="SQL" />
+						</Grid>
+					</Grid>
+				</div>
 			</section>
 			<section className="portfolio__main__container">
 				<h1 className="portfolio__main__title">Portfolio</h1>

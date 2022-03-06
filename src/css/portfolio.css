@@ -38,7 +38,7 @@
 }
 
 .portfolio__main__title {
-	font-size: 32px;
+	font-size: 30px;
 	color: rgba(245, 245, 245, 0.856);
 }
 
@@ -48,7 +48,7 @@
 	font-size: 24px;
 	letter-spacing: 1px;
 	background-color: #21252c;
-	border-radius: 15px 15px 0 0;
+	border-radius: 10px 10px 0 0;
 }
 
 .portfolio__grid__imageContainer {
@@ -58,7 +58,7 @@
 .portfolio__grid__image {
 	max-height: 100%;
 	max-width: 100%;
-	border-radius: 0 0 15px 15px;
+	border-radius: 0 0 10px 10px;
 }
 
 .portfolio__grid__image:hover {
@@ -78,7 +78,7 @@
 	height: 100%;
 	width: 100%;
 	background-color: transparent;
-	border-radius: 0 0 15px 15px;
+	border-radius: 0 0 10px 10px;
 	cursor: default;
 	z-index: 3;
 	padding: 0.5rem;

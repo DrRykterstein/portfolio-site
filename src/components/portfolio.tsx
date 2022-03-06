@@ -23,9 +23,9 @@ const useStyles = makeStyles((theme) => ({
 		height: "40px",
 		fontSize: "16px",
 		backgroundColor: "#212121",
-		color: "#90A4AE",
-		// backgroundColor: "#E0E0E0",
-		// color: "#757575",
+		// color: "#CFD8DC",
+		// backgroundColor: "#BDBDBD",
+		color: "#B3E5FC",
 		[theme.breakpoints.down("xs")]: {
 			height: "32px",
 			fontSize: "14px",
@@ -85,6 +85,9 @@ const Portfolio: React.FC = () => {
 						</Grid>
 						<Grid item>
 							<Chip className={classes.SkillsChip} label="SQL" />
+						</Grid>
+						<Grid item>
+							<Chip className={classes.SkillsChip} label="TypeScript" />
 						</Grid>
 					</Grid>
 				</div>

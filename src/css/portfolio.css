@@ -38,7 +38,7 @@
 }
 
 .portfolio__main__title {
-	font-size: 30px;
+	font-size: 32px;
 	color: rgba(245, 245, 245, 0.856);
 }
 
@@ -49,6 +49,7 @@
 	letter-spacing: 1px;
 	background-color: #21252c;
 	border-radius: 10px 10px 0 0;
+	cursor: default;
 }
 
 .portfolio__grid__imageContainer {

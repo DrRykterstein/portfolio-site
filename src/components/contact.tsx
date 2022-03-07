@@ -8,14 +8,11 @@ import "../css/contact.css";
 const useStyles = makeStyles(() => ({
 	MuiButton: {
 		fontSize: "18px",
-	},
-	root: {
-		"&$focused": {
-			color: "#4FC3F7",
-		},
-		"&$focused $notchedOutLine": {
-			borderColor: "#4FC3F7",
-		},
+		// backgroundColor: "#9CCC65",
+		// color: "#FFFFF8",
+		// "&:hover": {
+		// 	backgroundColor: "#8BC34A",
+		// },
 	},
 }));
 
@@ -98,7 +95,6 @@ const Contact: React.FC = () => {
 							onChange={handleInputChange}
 						/>
 						<Input
-							color="primary"
 							label="Email"
 							name="email"
 							value={formValues.email}
@@ -107,7 +103,6 @@ const Contact: React.FC = () => {
 							onChange={handleInputChange}
 						/>
 						<Input
-							color="primary"
 							label="Message*"
 							multiline={true}
 							rows={5}

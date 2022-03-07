@@ -1,18 +1,21 @@
 import { createMuiTheme } from "@material-ui/core";
 import {
 	blue,
+	blueGrey,
 	indigo,
 	lightBlue,
-	grey,
 	teal,
-	purple,
+	orange,
 	deepOrange,
+	red,
+	lightGreen,
 } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
 	palette: {
 		primary: {
 			main: blue[800],
+			dark: blue[900],
 			light: lightBlue[300],
 		},
 		// secondary: {
@@ -20,12 +23,13 @@ const theme = createMuiTheme({
 		// 	light: indigo[300],
 		// },
 		secondary: {
-			main: grey[900],
-			light: purple[300],
+			main: lightGreen[500],
+			dark: lightGreen[600],
+			light: lightBlue[300],
 		},
 		info: {
-			main: grey[400],
-			light: grey[200],
+			main: teal[600],
+			light: teal[200],
 		},
 	},
 	overrides: {

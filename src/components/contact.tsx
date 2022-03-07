@@ -1,13 +1,21 @@
 import React from "react";
-import { Grid, makeStyles } from "@material-ui/core";
 import emailjs from "emailjs-com";
 import { SharedComponents } from "../shared-components/SharedComponents";
 import useForm from "../controls/useForm";
+import { Grid, makeStyles } from "@material-ui/core";
 import "../css/contact.css";
 
 const useStyles = makeStyles(() => ({
 	MuiButton: {
 		fontSize: "18px",
+	},
+	root: {
+		"&$focused": {
+			color: "#4FC3F7",
+		},
+		"&$focused $notchedOutLine": {
+			borderColor: "#4FC3F7",
+		},
 	},
 }));
 
@@ -46,7 +54,7 @@ const Contact: React.FC = () => {
 
 		setFormErrors({ ...temp }); // Store error details in state
 
-		return Object.values(temp).every(x => x === ""); // Return true if input values either exist or are valid
+		return Object.values(temp).every((x) => x === ""); // Return true if input values either exist or are valid
 	};
 
 	// Send email upon submit
@@ -59,7 +67,7 @@ const Contact: React.FC = () => {
 				"user_KjeqDIChuQZZtV1bpVSjl"
 			);
 			console.log(result.text);
-		} catch (err) {
+		} catch (err: any) {
 			console.error(err.text);
 		}
 	};
@@ -90,6 +98,7 @@ const Contact: React.FC = () => {
 							onChange={handleInputChange}
 						/>
 						<Input
+							color="primary"
 							label="Email"
 							name="email"
 							value={formValues.email}
@@ -98,6 +107,7 @@ const Contact: React.FC = () => {
 							onChange={handleInputChange}
 						/>
 						<Input
+							color="primary"
 							label="Message*"
 							multiline={true}
 							rows={5}

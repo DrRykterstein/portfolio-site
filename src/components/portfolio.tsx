@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 		height: "40px",
 		fontSize: "16px",
 		backgroundColor: "#212121",
-		// color: "#CFD8DC",
+		// color: "#AED581",
 		// backgroundColor: "#BDBDBD",
 		color: "#B3E5FC",
 		[theme.breakpoints.down("xs")]: {

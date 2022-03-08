@@ -55,7 +55,7 @@ const Portfolio: React.FC = () => {
 		<main className="portfolio__container">
 			<section className="portfolio__intro__container">
 				<h1 className="portfolio__intro__title">
-					Web Developer specializing in C# and ASP.NET
+					Web Developer specializing in C# .NET and React
 				</h1>
 				{screenWidth > 968 && <Profiles component="Portfolio" />}
 				<Link className={classes.Link} to="/contact">

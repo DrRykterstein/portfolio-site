@@ -7,14 +7,14 @@ const portfolioItems: PortfolioItems = {
 		src: "bug-tracker.png",
 		github: "bug-tracker",
 		link: "https://dotnet-bug-tracker.herokuapp.com/",
-		desc: "A bug/issue tracking application built with C# ASP.NET MVC that stores and maintains issues in the form of tickets for a collection of projects. Includes authentication and role-based authorization with Identity.",
+		desc: "A bug/issue tracking application built with C# .NET MVC that stores and maintains issues in the form of tickets for a collection of projects. Includes authentication and role-based authorization with Identity.",
 	},
 	techBlog: {
 		title: "Technology Blog",
 		src: "tech-blog.png",
 		github: "tech-blog-server",
 		link: "https://tech-blog-three.vercel.app/blog",
-		desc: "A programming tutorial blog built with C# ASP.NET Web API and React that implements JWT authentication, claims-based authorization, and entity framework data access.",
+		desc: "A programming tutorial blog built with C# .NET Web API and React that implements JWT authentication, claims-based authorization, and entity framework data access.",
 	},
 	// wired: {
 	// 	title: "Wired",

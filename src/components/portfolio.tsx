@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
 	MuiButton__learnMore: {
 		borderRadius: "30px",
 		padding: theme.spacing(1.5, 3),
+		margin: theme.spacing(2.6, 0, 4, 0),
 		fontSize: "20px",
 		[theme.breakpoints.down("xs")]: {
 			fontSize: "16px",

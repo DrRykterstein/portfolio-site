@@ -14,13 +14,9 @@
 	flex-direction: column;
 	justify-content: center;
 	/* align-items: center; */
-	height: calc(100vh - 205px);
+	height: calc(100vh - 220px);
 	padding: 1rem;
 	background-color: var(--portfolioIntroBackground);
-}
-
-.portfolio__intro__container > * {
-	margin: 1rem 0;
 }
 
 .portfolio_intro_titleContainer {
@@ -32,7 +28,7 @@
 }
 
 .portfolio__intro__titleFaded {
-	color: #bebebb;
+	color: #b7b9b9;
 }
 
 /* Portfolio Grid Layout */

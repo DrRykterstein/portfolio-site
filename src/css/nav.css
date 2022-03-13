@@ -5,6 +5,9 @@
 	padding: 1.5rem;
 	background-color: var(--mainBackground);
 	color: white;
+	position: sticky !important;
+	top: 0;
+	z-index: 100;
 }
 
 .header__textDecoration {

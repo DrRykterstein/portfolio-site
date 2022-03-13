@@ -28,12 +28,12 @@ const PortfolioItem: React.FC<Props> = ({ Items, item, classes }) => {
 	}, [screenWidth]);
 
 	// Display full app description on desktop via a popup trigger on mobile
-	const handleProjectDescription = () =>
+	const displayProjectDescription = () =>
 		screenWidth <= 668 || (screenWidth > 960 && screenWidth < 1400) ? (
 			<>
 				<Typography
 					className="popup__link"
-					variant="h6"
+					variant={screenWidth <= 468 ? "body1" : "h6"}
 					onClick={handleAnchorOpen}
 				>
 					Read App Description...
@@ -86,13 +86,19 @@ const PortfolioItem: React.FC<Props> = ({ Items, item, classes }) => {
 							<AnchorLink className={classes.Link} href={link}>
 								<MuiButton
 									className={classes.MuiButton__viewSite}
-									size={screenWidth <= 568 ? "medium" : "large"}
+									size={
+										screenWidth <= 568
+											? screenWidth <= 368
+												? "small"
+												: "medium"
+											: "large"
+									}
 									color="secondary"
 								>
 									View Site
 								</MuiButton>
 							</AnchorLink>
-							{handleProjectDescription()}
+							{displayProjectDescription()}
 						</div>
 					</div>
 				</div>

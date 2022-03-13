@@ -12,11 +12,6 @@ function App() {
 		<ScreenSizeProvider>
 			<main className="App">
 				<Header />
-				{/* <Switch>
-					<Route path="/" component={Intro} />
-					<Route path="/portfolio" component={Portfolio} />
-					<Route path="/contact" component={Contact} />
-				</Switch> */}
 				<div className="sections">
 					<Intro />
 					<Portfolio />

@@ -49,11 +49,11 @@ const Intro: React.FC = () => {
 				<h1 className="intro__title">Specializing in C# .NET & React</h1>
 			</div>
 			{screenWidth > 968 && <Profiles component="Portfolio" />}
-			<Link className={classes.Link} to="/contact">
+			<a className={classes.Link} href="#contact">
 				<MuiButton className={classes.MuiButton__learnMore} color="secondary">
 					Have a Query?
 				</MuiButton>
-			</Link>
+			</a>
 			<div>
 				<Grid container spacing={2}>
 					<Grid item>

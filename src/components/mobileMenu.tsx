@@ -43,19 +43,22 @@ const MobileMenu: React.FC<Props> = () => {
 			>
 				<List>
 					<ListItem className="header__mobile__item" onClick={handleBurgerMenu}>
-						<Link className="header__link header__textDecoration" to="/">
+						<a className="header__link header__textDecoration" href="#">
 							<ListItemText>Home</ListItemText>
-						</Link>
+						</a>
 					</ListItem>
 					<ListItem className="header__mobile__item" onClick={handleBurgerMenu}>
-						<Link className="header__link header__textDecoration" to="/">
+						<a
+							className="header__link header__textDecoration"
+							href="#portfolio"
+						>
 							<ListItemText>Portfolio</ListItemText>
-						</Link>
+						</a>
 					</ListItem>
 					<ListItem className="header__mobile__item" onClick={handleBurgerMenu}>
-						<Link className="header__link header__textDecoration" to="/contact">
+						<a className="header__link header__textDecoration" href="#contact">
 							<ListItemText>Contact</ListItemText>
-						</Link>
+						</a>
 					</ListItem>
 				</List>
 			</Drawer>

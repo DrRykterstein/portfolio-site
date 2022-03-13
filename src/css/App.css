@@ -39,25 +39,28 @@ code {
 .App {
 	font-family: Roboto;
 	background-color: #0f1217;
-	height: 100vh;
 	overflow-y: auto;
 }
 
-.contact__container {
-	max-width: 50%;
-	margin: 7rem auto;
-	padding: 1.5rem;
-	background-color: "#e9e9e9";
+.sections {
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
 }
 
-@media only screen and (max-width: 1168px) {
-	.contact__container {
-		max-width: 65%;
+.section__title {
+	font-size: 32px;
+	color: rgba(245, 245, 245, 0.856);
+	margin: 1.5rem 0;
+}
+
+@media screen and (max-width: 968px) {
+	.section__title {
+		font-size: 28px;
 	}
 }
 
-@media only screen and (max-width: 1068px) {
-	.contact__container {
-		max-width: 80%;
+@media screen and (max-width: 568px) {
+	.section__title {
+		font-size: 22px;
 	}
 }

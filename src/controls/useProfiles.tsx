@@ -2,15 +2,15 @@ import { makeStyles } from "@material-ui/core";
 import { ClassNameMap } from "@material-ui/styles";
 
 // Define profiles style types for specific pages
-const useSideBarStyles = makeStyles(theme => ({
+const useSideBarStyles = makeStyles((theme) => ({
 	root: {
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
 		alignItems: "center",
-		position: "absolute",
-		right: "2.5rem",
-		top: "40%",
+		position: "fixed",
+		right: "2rem",
+		top: "45%",
 	},
 	icon: {
 		color: "#fff",
@@ -19,7 +19,7 @@ const useSideBarStyles = makeStyles(theme => ({
 	},
 }));
 
-const useFooterStyles = makeStyles(theme => ({
+const useFooterStyles = makeStyles((theme) => ({
 	root: {
 		display: "flex",
 		justifyContent: "center",

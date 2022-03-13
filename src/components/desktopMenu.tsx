@@ -17,12 +17,15 @@ const DesktopMenu: React.FC<Props> = () => {
 
 	return (
 		<ul className="header__menu">
-			<Link className="header__link header__textDecoration" to="/">
+			<a className="header__link header__textDecoration" href="#">
+				<li className="header__linkText">Home</li>
+			</a>
+			<a className="header__link header__textDecoration" href="#portfolio">
 				<li className="header__linkText">Portfolio</li>
-			</Link>
-			<Link className="header__link header__textDecoration" to="/contact">
+			</a>
+			<a className="header__link header__textDecoration" href="#contact">
 				<MuiButton className={classes.MuiButton}>Contact</MuiButton>
-			</Link>
+			</a>
 		</ul>
 	);
 };

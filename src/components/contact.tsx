@@ -2,7 +2,7 @@ import React from "react";
 import emailjs from "emailjs-com";
 import { SharedComponents } from "../shared-components/SharedComponents";
 import useForm from "../controls/useForm";
-import { Grid, makeStyles } from "@material-ui/core";
+import { Grid, makeStyles, Paper } from "@material-ui/core";
 import "../css/contact.css";
 
 const useStyles = makeStyles(() => ({
@@ -81,50 +81,53 @@ const Contact: React.FC = () => {
 	};
 
 	return (
-		<>
-			<Form onSubmit={handleSubmit}>
-				<h1 className="contact__title">Queries</h1>
-				<Grid container>
-					<Grid item xs={12}>
-						<Input
-							label="Full Name*"
-							name="name"
-							value={formValues.name}
-							error={formErrors.name ? true : false}
-							helperText={formErrors.name}
-							onChange={handleInputChange}
-						/>
-						<Input
-							label="Email"
-							name="email"
-							value={formValues.email}
-							error={formErrors.email ? true : false}
-							helperText={formErrors.email}
-							onChange={handleInputChange}
-						/>
-						<Input
-							label="Message*"
-							multiline={true}
-							rows={5}
-							name="message"
-							value={formValues.message}
-							error={formErrors.message ? true : false}
-							helperText={formErrors.message}
-							onChange={handleInputChange}
-						/>
-						<div className="contact__btn__container">
-							<MuiButton
-								className={classes.MuiButton}
-								type="submit"
-								color="secondary"
-							>
-								Send Message
-							</MuiButton>
-						</div>
+		<section className="contact__container" id="contact">
+			<h1 className="section__title">Contact</h1>
+			<Paper className={`contact__formContainer`}>
+				<Form onSubmit={handleSubmit}>
+					{/* <h1 className="contact__title">Have a query?</h1> */}
+					<Grid container>
+						<Grid item xs={12}>
+							<Input
+								label="Full Name*"
+								name="name"
+								value={formValues.name}
+								error={formErrors.name ? true : false}
+								helperText={formErrors.name}
+								onChange={handleInputChange}
+							/>
+							<Input
+								label="Email"
+								name="email"
+								value={formValues.email}
+								error={formErrors.email ? true : false}
+								helperText={formErrors.email}
+								onChange={handleInputChange}
+							/>
+							<Input
+								label="Message*"
+								multiline={true}
+								rows={5}
+								name="message"
+								value={formValues.message}
+								error={formErrors.message ? true : false}
+								helperText={formErrors.message}
+								onChange={handleInputChange}
+							/>
+							<div className="contact__btn__container">
+								<MuiButton
+									className={classes.MuiButton}
+									type="submit"
+									color="secondary"
+								>
+									Send Message
+								</MuiButton>
+							</div>
+						</Grid>
 					</Grid>
-				</Grid>
-			</Form>
-		</>
+				</Form>
+			</Paper>
+		</section>
 	);
 };
 

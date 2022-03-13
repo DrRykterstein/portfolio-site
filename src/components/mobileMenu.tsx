@@ -42,22 +42,18 @@ const MobileMenu: React.FC<Props> = () => {
 				onClose={handleBurgerMenu}
 			>
 				<List>
-					<ListItem
-						className="header__mobile__item"
-						onClick={handleBurgerMenu}
-					>
+					<ListItem className="header__mobile__item" onClick={handleBurgerMenu}>
+						<Link className="header__link header__textDecoration" to="/">
+							<ListItemText>Home</ListItemText>
+						</Link>
+					</ListItem>
+					<ListItem className="header__mobile__item" onClick={handleBurgerMenu}>
 						<Link className="header__link header__textDecoration" to="/">
 							<ListItemText>Portfolio</ListItemText>
 						</Link>
 					</ListItem>
-					<ListItem
-						className="header__mobile__item"
-						onClick={handleBurgerMenu}
-					>
-						<Link
-							className="header__link header__textDecoration"
-							to="/contact"
-						>
+					<ListItem className="header__mobile__item" onClick={handleBurgerMenu}>
+						<Link className="header__link header__textDecoration" to="/contact">
 							<ListItemText>Contact</ListItemText>
 						</Link>
 					</ListItem>

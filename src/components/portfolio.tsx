@@ -62,7 +62,7 @@ const Portfolio: React.FC = () => {
 				<div className="portfolio_intro_titleContainer">
 					<h1 className="portfolio__intro__titleFaded">Web Developer</h1>
 					<h1 className="portfolio__intro__title">
-						Proficient in C# .NET and React
+						Specialized in C# .NET & React
 					</h1>
 				</div>
 				{screenWidth > 968 && <Profiles component="Portfolio" />}

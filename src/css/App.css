@@ -1,63 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
 }
 
 :focus {
-  outline: none;
+	outline: none;
 }
 
 :root {
-  --mainBackground: #0F1217;
-  --mainChildrenBackground: #0E1A36;
-  /* --headerBackground: #24315E;
+	--mainBackground: #0f1217;
+	--mainChildrenBackground: #0e1a36;
+	/* --headerBackground: #24315E;
   --portfolioIntroBackground: #303C6C;
   --portfolioGridBackground: #439684;
   --contactFormBackground: #303C6C; */
-  --text: #fcfcfcbb;
-  --btn: #4978e7;
+	--text: #fcfcfcbb;
+	--btn: #4978e7;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 .App {
-  font-family: Roboto;
-  background-color: #0F1217;
-  height: 100vh;
-  overflow-y: auto;
+	font-family: Roboto;
+	background-color: #0f1217;
+	height: 100vh;
+	overflow-y: auto;
 }
 
 .contact__container {
-  max-width: 50%;
-  margin: 7rem auto;
-  padding: 1.5rem;
-  background-color: "#e9e9e9";
+	max-width: 50%;
+	margin: 7rem auto;
+	padding: 1.5rem;
+	background-color: "#e9e9e9";
 }
 
 @media only screen and (max-width: 1168px) {
-  .contact__container {
-    max-width: 65%;
-  }
+	.contact__container {
+		max-width: 65%;
+	}
 }
 
 @media only screen and (max-width: 1068px) {
-  .contact__container {
-    max-width: 80%;
-  }
+	.contact__container {
+		max-width: 80%;
+	}
 }

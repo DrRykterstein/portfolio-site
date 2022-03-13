@@ -13,6 +13,10 @@ const useStyles = makeStyles((theme) => ({
 		borderRadius: "30px",
 		padding: theme.spacing(1.5, 3),
 		fontSize: "20px",
+		[theme.breakpoints.down("xs")]: {
+			fontSize: "16px",
+			padding: theme.spacing(1, 2.2),
+		},
 	},
 	MuiButton__viewSite: {
 		fontSize: "18px",
@@ -54,9 +58,12 @@ const Portfolio: React.FC = () => {
 	return (
 		<main className="portfolio__container">
 			<section className="portfolio__intro__container">
-				<h1 className="portfolio__intro__title">
-					Web Developer specializing in C# .NET and React
-				</h1>
+				<div className="portfolio_intro_titleContainer">
+					<h1 className="portfolio__intro__titleFaded">Web Developer</h1>
+					<h1 className="portfolio__intro__title">
+						Proficient in C# .NET and React
+					</h1>
+				</div>
 				{screenWidth > 968 && <Profiles component="Portfolio" />}
 				<Link className={classes.Link} to="/contact">
 					<MuiButton className={classes.MuiButton__learnMore} color="secondary">
@@ -81,7 +88,7 @@ const Portfolio: React.FC = () => {
 							<Chip className={classes.SkillsChip} label="React" />
 						</Grid>
 						<Grid item>
-							<Chip className={classes.SkillsChip} label="REST API" />
+							<Chip className={classes.SkillsChip} label="Web API" />
 						</Grid>
 						<Grid item>
 							<Chip className={classes.SkillsChip} label="SQL" />

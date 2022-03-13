@@ -13,9 +13,9 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	/* align-items: center; */
+	height: calc(100vh - 205px);
 	padding: 1rem;
-	min-height: 40vh;
 	background-color: var(--portfolioIntroBackground);
 }
 
@@ -23,9 +23,16 @@
 	margin: 1rem 0;
 }
 
+.portfolio_intro_titleContainer {
+	font-size: 40px;
+}
+
 .portfolio__intro__title {
-	font-size: 50px;
 	color: white;
+}
+
+.portfolio__intro__titleFaded {
+	color: #bebebb;
 }
 
 /* Portfolio Grid Layout */
@@ -45,7 +52,7 @@
 .portfolio__grid__title {
 	padding: 0.5rem;
 	color: rgba(245, 245, 245, 0.719);
-	font-size: 24px;
+	font-size: 23px;
 	letter-spacing: 1px;
 	background-color: #21252c;
 	border-radius: 10px 10px 0 0;
@@ -109,4 +116,38 @@
 	color: #6b7280;
 	/* border-radius: 50px;
 	background-color: #a7a7a736; */
+}
+
+@media screen and (max-width: 968px) {
+	.portfolio_intro_titleContainer {
+		font-size: 35px;
+	}
+
+	.portfolio__main__title {
+		font-size: 28px;
+	}
+
+	.portfolio__grid__title {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.portfolio_intro_titleContainer {
+		font-size: 28px;
+	}
+
+	.portfolio__main__title {
+		font-size: 22px;
+	}
+
+	.portfolio__grid__title {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.portfolio_intro_titleContainer {
+		font-size: 22px;
+	}
 }

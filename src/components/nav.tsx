@@ -11,9 +11,9 @@ const Header: React.FC = () => {
 
 	return (
 		<Toolbar className="header">
-			<Link className="header__textDecoration" to="/">
+			<a className="header__textDecoration" href="#">
 				<h1 className="header__logo">Terioch</h1>
-			</Link>
+			</a>
 			{screenWidth >= 568 ? <DesktopMenu /> : <MobileMenu />}
 		</Toolbar>
 	);

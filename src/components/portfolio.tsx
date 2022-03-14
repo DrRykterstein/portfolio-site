@@ -31,7 +31,8 @@ const Portfolio: React.FC = () => {
 	const classes = useStyles();
 
 	return (
-		<section className="portfolio__container" id="portfolio">
+		<section className="portfolio__container">
+			<a className="portfolio__anchor" id="portfolio"></a>
 			<h1 className="section__title">Portfolio</h1>
 			<Grid container spacing={2}>
 				{Object.keys(portfolioItems).map((item, idx) => (

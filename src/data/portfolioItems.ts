@@ -3,18 +3,18 @@ import { PortfolioItems } from "../models/PortfolioItems";
 // Define items for portfolio
 const portfolioItems: PortfolioItems = {
 	bugTracker: {
-		title: "Bug Tracker",
+		title: "Bugtrace",
 		src: "bug-tracker.png",
 		github: "bug-tracker",
-		link: "https://dotnet-bug-tracker.herokuapp.com/",
+		link: "https://bugtrace.herokuapp.com/",
 		desc: "A bug/issue tracking application built with C# .NET MVC that stores and maintains issues in the form of tickets for a collection of projects. Includes authentication and role-based authorization with Identity.",
 	},
 	techBlog: {
-		title: "Technology Blog",
+		title: "Terioch Blog",
 		src: "tech-blog.png",
 		github: "tech-blog-server",
 		link: "https://tech-blog-three.vercel.app/blog",
-		desc: "A programming tutorial blog built with C# .NET Web API and React that implements JWT authentication, claims-based authorization, and entity framework data access.",
+		desc: "A programming tutorial blog built with C# .NET Web API and React that implements JWT authentication, claims-based authorization, and Entity Framework data access.",
 	},
 	// wired: {
 	// 	title: "Wired",
@@ -31,7 +31,7 @@ const portfolioItems: PortfolioItems = {
 	// 	desc: "A website for a technology development company built in NextJS with Ghost as a headless CMS. The design was implemented using Styled Components, SCSS and Material UI.",
 	// },
 	bookStore: {
-		title: "Book Store",
+		title: "Infinite Book Store",
 		src: "book-store.png",
 		github: "infinite-book-store",
 		link: "https://book-store-nine.vercel.app",

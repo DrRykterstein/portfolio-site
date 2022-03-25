@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	Link: {
 		textDecoration: "none",
+		width: "max-content",
 	},
 }));
 
@@ -46,7 +47,7 @@ const Intro: React.FC = () => {
 		<section className="intro__container">
 			<div className="intro_titleContainer">
 				<h1 className="intro__titleFaded">Web Developer</h1>
-				<h1 className="intro__title">Specializing in C# .NET & React</h1>
+				<h1 className="intro__title">Specializing in C# .NET & MVC</h1>
 			</div>
 			{screenWidth > 968 && <Profiles component="Portfolio" />}
 			<a className={classes.Link} href="#contact">

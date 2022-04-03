@@ -10,7 +10,7 @@ const portfolioItems: PortfolioItems = {
 		desc: "A bug/issue tracking application built with C# .NET MVC that stores and maintains issues in the form of tickets for a collection of projects. Includes authentication and role-based authorization with Identity.",
 	},
 	techBlog: {
-		title: "Terioch Blog",
+		title: "Techtrace",
 		src: "tech-blog.png",
 		github: "tech-blog-server",
 		link: "https://tech-blog-three.vercel.app/blog",

@@ -11,9 +11,9 @@ const portfolioItems: PortfolioItems = {
 	},
 	techBlog: {
 		title: "Techtrace",
-		src: "tech-blog.png",
+		src: "techtrace.png",
 		github: "tech-blog-server",
-		link: "https://tech-blog-three.vercel.app/blog",
+		link: "https://techtrace.vercel.app/blog",
 		desc: "A programming tutorial blog built with C# .NET Web API and React that implements JWT authentication, claims-based authorization, and Entity Framework data access.",
 	},
 	// wired: {

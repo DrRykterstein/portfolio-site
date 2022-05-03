@@ -42,7 +42,7 @@ const portfolioItems: PortfolioItems = {
 		src: "task-tracker.png",
 		github: "task-tracker",
 		link: "https://optimistic-poitras-267ce4.netlify.app",
-		desc: "A task tracking application built with React and structured using class components. Includes CRUD functionality as well as MySQL database integration and displays a background image fetched using the Unsplash REST API.",
+		desc: "A task tracking application built with React. Includes MySQL database integration and displays a background image fetched via the Unsplash REST API.",
 	},
 	countryLibrary: {
 		title: "Country Library",

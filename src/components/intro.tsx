@@ -45,7 +45,7 @@ const Intro: React.FC = () => {
 
 	return (
 		<section className="intro__container">
-			<div className="intro_titleContainer">
+			<div className="intro__titleContainer">
 				<h1 className="intro__titleFaded">Web Developer</h1>
 				<h1 className="intro__title">Specializing in C# .NET & MVC</h1>
 			</div>

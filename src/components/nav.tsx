@@ -12,7 +12,7 @@ const Header: React.FC = () => {
 	return (
 		<Toolbar className="header">
 			<a className="header__textDecoration" href="#">
-				<h1 className="header__logo">Terioch</h1>
+				<h1 className="header__logo">Techtrace</h1>
 			</a>
 			{screenWidth >= 568 ? <DesktopMenu /> : <MobileMenu />}
 		</Toolbar>

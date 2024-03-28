@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
 		<footer className={classes.root}>
 			<Profiles component="Footer" />
 			<p className={classes.text}>
-				Techtrace Development | Copyright &copy; 2022
+				Techtrace Development | Copyright &copy; 2024
 			</p>
 		</footer>
 	);

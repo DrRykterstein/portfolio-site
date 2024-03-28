@@ -73,9 +73,10 @@
 .portfolio__grid__overlay__items {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	height: 100%;
+	padding: 1rem 0;
 }
 
 .portfolio__grid__text {

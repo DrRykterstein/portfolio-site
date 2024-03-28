@@ -1,8 +1,8 @@
-import ReactDOM from "react-dom";
-import { HashRouter as Router, Route } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core";
-import theme from "./theme";
+import ReactDOM from "react-dom";
+import { Route, HashRouter as Router } from "react-router-dom";
 import App from "./App";
+import theme from "./theme";
 
 ReactDOM.render(
 	<ThemeProvider theme={theme}>

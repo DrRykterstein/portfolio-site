@@ -1,15 +1,23 @@
 import { PortfolioItems } from "../models/PortfolioItems";
 
-// Define items for portfolio
-const portfolioItems: PortfolioItems = {
-	bugTracker: {
+export interface PortfolioItem {
+	title: string;
+	src: string;
+	github: string;
+	link: string;
+	desc: string;
+	isLive?: boolean;
+}
+
+const portfolioItems: PortfolioItem[] = [
+	{
 		title: "Bugtrace",
 		src: "bug-tracker.png",
 		github: "bug-tracker",
 		link: "https://bugtrace.herokuapp.com/",
 		desc: "A bug/issue tracking application built with C# .NET MVC that stores and maintains issues in the form of tickets for a collection of projects. Includes authentication and role-based authorization with Identity.",
 	},
-	techBlog: {
+	{
 		title: "Techtrace",
 		src: "techtrace.png",
 		github: "tech-blog-server",
@@ -30,27 +38,30 @@ const portfolioItems: PortfolioItems = {
 	// 	link: "https://borgfy-five.vercel.app",
 	// 	desc: "A website for a technology development company built in NextJS with Ghost as a headless CMS. The design was implemented using Styled Components, SCSS and Material UI.",
 	// },
-	bookStore: {
+	{
 		title: "Infinite Book Store",
 		src: "book-store.png",
 		github: "infinite-book-store",
 		link: "https://book-store-nine.vercel.app",
 		desc: "A Book store built with NextJS, Typescript, and Shopify with headless integration as well as full firebase authentication. Products are fetched using GraphQL through Shopify's storefront API.",
+		isLive: true,
 	},
-	taskTracker: {
+	{
 		title: "Task Tracker",
 		src: "task-tracker.png",
 		github: "task-tracker",
 		link: "https://optimistic-poitras-267ce4.netlify.app",
 		desc: "A task tracking application built with React. Includes MySQL database integration and displays a background image fetched via the Unsplash REST API.",
+		isLive: true,
 	},
-	countryLibrary: {
+	{
 		title: "Country Library",
 		src: "country-library.png",
 		github: "infinite-country-library",
 		link: "https://modest-volhard-e48a9a.netlify.app",
 		desc: "A website built with HTML, CSS and Javascript that displays information regarding a specific country based on data fetched from an external API.",
+		isLive: true,
 	},
-};
+];
 
 export default portfolioItems;

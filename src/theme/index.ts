@@ -1,6 +1,24 @@
-import { createMuiTheme } from "@material-ui/core";
-import { blue, lightBlue, teal, lightGreen } from "@material-ui/core/colors";
+import { PaletteColorOptions, createMuiTheme } from "@material-ui/core";
+import { blue, lightBlue, lightGreen, teal } from "@material-ui/core/colors";
 
+declare module "@material-ui/styles" {
+	interface Palette {
+		info: PaletteColorOptions;
+	}
+
+	interface PaletteOptions {
+		info: PaletteColorOptions;
+	}
+}
+
+declare module "@material-ui/core/Button" {
+	interface ButtonPropsColorOverrides {
+		info: true;
+		warning: true;
+	}
+}
+
+const { palette } = createMuiTheme();
 const theme = createMuiTheme({
 	palette: {
 		primary: {
@@ -13,10 +31,11 @@ const theme = createMuiTheme({
 			dark: lightGreen[600],
 			light: lightGreen[300],
 		},
-		info: {
-			main: teal[600],
-			light: teal[200],
-		},
+		info: palette.augmentColor({ main: teal[600] }),
+		// info: {
+		// 	main: teal[600],
+		// 	light: teal[200],
+		// },
 	},
 	overrides: {
 		MuiButton: {

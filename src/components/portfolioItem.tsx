@@ -1,20 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { PortfolioItems } from "../models/PortfolioItems";
-import { Classes } from "../models/Classes";
-import { SharedComponents } from "../shared-components/SharedComponents";
+import { Grid, Paper, Typography } from "@material-ui/core";
+import { useEffect, useState } from "react";
 import { useScreenSize } from "../contexts/screenSizeContext";
 import usePopup from "../controls/usePopup";
-import { Grid, Paper, Typography } from "@material-ui/core";
+import { Classes } from "../models/Classes";
+import { SharedComponents } from "../shared-components/SharedComponents";
+import { PortfolioItem as IPortfolioItem } from "../data/portfolioItems";
 
 interface Props {
-	Items: PortfolioItems;
-	item: string;
+	item: IPortfolioItem;
 	classes: Classes;
 }
 
-const PortfolioItem: React.FC<Props> = ({ Items, item, classes }) => {
+const PortfolioItem = ({ item, classes }: Props) => {
 	const { MuiButton, Popup, AnchorLink, SvgIcon } = SharedComponents;
-	const { title, src, github, link, desc } = Items[item];
 	const { anchor, handleAnchorOpen, handleAnchorClose } = usePopup();
 	const { screenWidth } = useScreenSize();
 	const [descSize, setDescSize] = useState("");
@@ -28,7 +26,7 @@ const PortfolioItem: React.FC<Props> = ({ Items, item, classes }) => {
 	}, [screenWidth]);
 
 	// Display full app description on desktop via a popup trigger on mobile
-	const displayProjectDescription = () =>
+	const renderProjectDescription = () =>
 		screenWidth <= 668 || (screenWidth > 960 && screenWidth < 1400) ? (
 			<>
 				<Typography
@@ -45,7 +43,7 @@ const PortfolioItem: React.FC<Props> = ({ Items, item, classes }) => {
 					transformOrigin={{ vertical: "bottom", horizontal: "center" }}
 					onClose={handleAnchorClose}
 				>
-					<Typography className={classes.Typography}>{desc}</Typography>
+					<Typography className={classes.Typography}>{item.desc}</Typography>
 				</Popup>
 			</>
 		) : (
@@ -53,23 +51,23 @@ const PortfolioItem: React.FC<Props> = ({ Items, item, classes }) => {
 				className="portfolio__grid__text"
 				variant={descSize === "h6" ? "h6" : "body1"}
 			>
-				{desc}
+				{item.desc}
 			</Typography>
 		);
 
 	return (
 		<Grid item xs={12} md={6}>
 			<Paper className={`${classes.Paper} portfolio__grid__item`}>
-				<h1 className="portfolio__grid__title">{title}</h1>
+				<h1 className="portfolio__grid__title">{item.title}</h1>
 				<div className="portfolio__grid__imageContainer">
 					<img
 						className="portfolio__grid__image"
-						src={`${process.env.PUBLIC_URL}/images/${src}`}
+						src={`${process.env.PUBLIC_URL}/images/${item.src}`}
 						alt="Loading..."
 					/>
 					<div className="portfolio__grid__overlay">
 						<div className="portfolio__grid__overlay__items">
-							<AnchorLink href={`https://github.com/Terioch/${github}`}>
+							<AnchorLink href={`https://github.com/Terioch/${item.github}`}>
 								<SvgIcon
 									className={`portfolio__grid__github`}
 									width={screenWidth <= 414 ? "25" : "35"}
@@ -83,22 +81,25 @@ const PortfolioItem: React.FC<Props> = ({ Items, item, classes }) => {
 									</Typography>
 								</Popup> */}
 							</AnchorLink>
-							<AnchorLink className={classes.Link} href={link}>
-								<MuiButton
-									className={classes.MuiButton__viewSite}
-									size={
-										screenWidth <= 568
-											? screenWidth <= 368
-												? "small"
-												: "medium"
-											: "large"
-									}
-									color="secondary"
-								>
-									View Site
-								</MuiButton>
-							</AnchorLink>
-							{displayProjectDescription()}
+							{item.isLive && (
+								<AnchorLink className={classes.Link} href={item.link}>
+									<MuiButton
+										className={classes.MuiButton__viewSite}
+										size={
+											screenWidth <= 568
+												? screenWidth <= 368
+													? "small"
+													: "medium"
+												: "large"
+										}
+										color="primary"
+									>
+										View Site
+									</MuiButton>
+								</AnchorLink>
+							)}
+
+							{renderProjectDescription()}
 						</div>
 					</div>
 				</div>

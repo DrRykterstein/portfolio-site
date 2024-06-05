@@ -1,10 +1,9 @@
+import { Chip, Grid, makeStyles } from "@material-ui/core";
 import React from "react";
-import { Link } from "react-router-dom";
-import { Components } from "./Components";
-import { SharedComponents } from "../shared-components/SharedComponents";
 import { useScreenSize } from "../contexts/screenSizeContext";
-import { Grid, Chip, makeStyles } from "@material-ui/core";
 import "../css/intro.css";
+import { SharedComponents } from "../shared-components/SharedComponents";
+import { Components } from "./Components";
 
 const useStyles = makeStyles((theme) => ({
 	MuiButton__learnMore: {
@@ -47,7 +46,7 @@ const Intro: React.FC = () => {
 		<section className="intro__container">
 			<div className="intro__titleContainer">
 				<h1 className="intro__titleFaded">Software Engineer</h1>
-				<h1 className="intro__title">Specializing in C# .NET & MVC</h1>
+				<h1 className="intro__title">Specialising in C# & .NET</h1>
 			</div>
 			{screenWidth > 968 && <Profiles component="Portfolio" />}
 			<a className={classes.Link} href="#contact">

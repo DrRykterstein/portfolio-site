@@ -1,9 +1,7 @@
-import { PortfolioItems } from "../models/PortfolioItems";
-
 export interface PortfolioItem {
 	title: string;
 	src: string;
-	github: string;
+	github?: string;
 	link: string;
 	desc: string;
 	isLive?: boolean;
@@ -11,18 +9,32 @@ export interface PortfolioItem {
 
 const portfolioItems: PortfolioItem[] = [
 	{
+		title: "OneTimePIM",
+		src: "one-time-pim.png",
+		link: "https://onetimepim.com/",
+		desc: "A product information management system built with C# .NET and Angular used by blue-chip companies with a need to manage and share large volumes of product data at scale featuring cutting-edge tools and integrations.",
+		isLive: true,
+	},
+	{
+		title: "Electrika",
+		src: "electrika.png",
+		link: "https://electrika.com/",
+		desc: "Terioch developed two major features for the Electrika Website built with C# .NET, Preact and Fresh. A comprehensive estimating tool used by customers to manage and estimate product quotations, and an advanced analytics system for tracking user traffic based on product popularity. (Only available to registered users).",
+		isLive: true,
+	},
+	{
 		title: "Bugtrace",
 		src: "bug-tracker.png",
 		github: "bug-tracker",
 		link: "https://bugtrace.herokuapp.com/",
-		desc: "A bug/issue tracking application built with C# .NET MVC that stores and maintains issues in the form of tickets for a collection of projects. Includes authentication and role-based authorization with Identity.",
+		desc: "A bug/issue tracking application built with C# .NET MVC that stores and maintains issues in the form of tickets for a collection of projects.",
 	},
 	{
 		title: "Techtrace",
 		src: "techtrace.png",
 		github: "tech-blog-server",
 		link: "https://techtrace.vercel.app/blog",
-		desc: "A programming tutorial blog built with C# .NET Web API and React that implements JWT authentication, claims-based authorization, and Entity Framework data access.",
+		desc: "A programming tutorial blog built with C# .NET Web API and React.",
 	},
 	// wired: {
 	// 	title: "Wired",

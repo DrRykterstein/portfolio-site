@@ -63,22 +63,16 @@ const Intro: React.FC = () => {
 						<Chip className={classes.SkillsChip} label=".NET" />
 					</Grid>
 					<Grid item>
-						<Chip className={classes.SkillsChip} label="MVC" />
-					</Grid>
-					<Grid item>
-						<Chip className={classes.SkillsChip} label="JavaScript" />
+						<Chip className={classes.SkillsChip} label="TypeScript" />
 					</Grid>
 					<Grid item>
 						<Chip className={classes.SkillsChip} label="React" />
 					</Grid>
 					<Grid item>
-						<Chip className={classes.SkillsChip} label="Web API" />
+						<Chip className={classes.SkillsChip} label="Angular" />
 					</Grid>
 					<Grid item>
 						<Chip className={classes.SkillsChip} label="SQL" />
-					</Grid>
-					<Grid item>
-						<Chip className={classes.SkillsChip} label="TypeScript" />
 					</Grid>
 				</Grid>
 			</div>

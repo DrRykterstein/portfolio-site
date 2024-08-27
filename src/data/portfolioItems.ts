@@ -19,7 +19,7 @@ const portfolioItems: PortfolioItem[] = [
 		title: "Electrika",
 		src: "electrika.png",
 		link: "https://electrika.com/",
-		desc: "Terioch developed two major features for the Electrika Website built with C# .NET, Preact and Fresh. A comprehensive estimating tool used by customers to manage and estimate product quotations, and an advanced analytics system for tracking user traffic based on product popularity. (Only available to registered users).",
+		desc: "The main Electrika Website built with C# .NET, Preact and Fresh. I developed a comprehensive estimating tool used by customers to manage and estimate product quotations, and an advanced analytics system for tracking user traffic based on product popularity. (Only available to registered users).",
 		isLive: true,
 	},
 	{

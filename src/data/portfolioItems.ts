@@ -55,7 +55,7 @@ const portfolioItems: PortfolioItem[] = [
 		src: "book-store.png",
 		github: "infinite-book-store",
 		link: "https://book-store-nine.vercel.app",
-		desc: "A Book store built with NextJS, Typescript, and Shopify with headless integration as well as full firebase authentication. Products are fetched using GraphQL through Shopify's storefront API.",
+		desc: "A Book store built with NextJS, Typescript, and Shopify with headless integration and firebase. Products are fetched using GraphQL through Shopify's storefront API.",
 		isLive: true,
 	},
 	{
@@ -63,17 +63,17 @@ const portfolioItems: PortfolioItem[] = [
 		src: "task-tracker.png",
 		github: "task-tracker",
 		link: "https://optimistic-poitras-267ce4.netlify.app",
-		desc: "A task tracking application built with React. Includes MySQL database integration and displays a background image fetched via the Unsplash REST API.",
+		desc: "A task tracking application built with React, MySQL and integrates with the Unsplash REST API.",
 		isLive: true,
 	},
-	{
-		title: "Country Library",
-		src: "country-library.png",
-		github: "infinite-country-library",
-		link: "https://modest-volhard-e48a9a.netlify.app",
-		desc: "A website built with HTML, CSS and Javascript that displays information regarding a specific country based on data fetched from an external API.",
-		isLive: true,
-	},
+	// {
+	// 	title: "Country Library",
+	// 	src: "country-library.png",
+	// 	github: "infinite-country-library",
+	// 	link: "https://modest-volhard-e48a9a.netlify.app",
+	// 	desc: "A website built with HTML, CSS and Javascript that displays information regarding a specific country based on data fetched from an external API.",
+	// 	isLive: true,
+	// },
 ];
 
 export default portfolioItems;

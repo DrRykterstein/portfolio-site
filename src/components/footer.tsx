@@ -22,11 +22,13 @@ const Footer: React.FC = () => {
 	const classes = useStyles();
 	const { Profiles } = Components;
 
+	const currentYear = () => new Date().getFullYear().toString();
+
 	return (
 		<footer className={classes.root}>
 			<Profiles component="Footer" />
 			<p className={classes.text}>
-				Techtrace Development | Copyright &copy; 2024
+				Techtrace Development | Copyright &copy; {currentYear()}
 			</p>
 		</footer>
 	);
